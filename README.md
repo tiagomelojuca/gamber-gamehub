@@ -14,13 +14,17 @@ Games' icons must be `PNG` files, and placed inside `src/icons` folder.
 
 ### To-do List
 - Delete button feature
-- Add new shortcut from UI
+- Add new game shortcut from UI
+- Change games' order from UI
+- Close Gamber when launching game
 - Customize the default electron's menu
 
 ### Licensing
 This project is licensed under MIT, please check LICENSE file.
 
 ### Credits
-- [Electron](https://github.com/electron/electron) (c) 2013-2020 GitHub Inc (MIT License)
-- [Nunjucks](https://github.com/mozilla/nunjucks) (c) 2012-2015, James Long (BSD License)
-- [SimpleBar](https://github.com/Grsmto/simplebar) (c) 2015 Jonathan Nicol (MIT License)
+- [Electron](https://github.com/electron/electron) (c) 2013-2020 GitHub Inc
+- [Nunjucks](https://github.com/mozilla/nunjucks) (c) 2012-2015, James Long
+- [SimpleBar](https://github.com/Grsmto/simplebar) (c) 2015 Jonathan Nicol
+
+All third party licenses above can be found in `3rdpartylicenses` folder.
