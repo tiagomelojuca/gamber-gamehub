@@ -1,0 +1,94 @@
+*, *::after, *::before {
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-app-region: no-drag;
+	cursor: default;
+}
+
+body {
+    font-family: sans-serif;
+    background: #e8e8e8;
+    color: #272727;
+    margin: 0;
+    padding: 0;
+}
+
+body #wrapper #header {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+body #wrapper #header h1 {
+    height: 40px;
+    overflow: hidden;
+    margin: 0;
+}
+
+body #games-wrapper ul {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 80px);
+}
+
+body #games-wrapper li {
+    display: flex;
+    color: #e8e8e8;
+    background-color: #414141;
+    width: 90vw;
+    height: 52px;
+    margin: 0 auto 1em;
+    padding: 10px;
+    box-sizing: border-box;
+    list-style: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+body #games-wrapper li:hover {
+    background-color: #272727;
+}
+
+body #games-wrapper li:active {
+    background-color: #000;
+    transition: all 0.1s;
+}
+
+body #games-wrapper .noactive:active {
+    background-color: #272727 !important;
+    transition: all 0.1s;
+}
+
+body #games-wrapper li .icon {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    margin-right: 10px;
+}
+
+body #games-wrapper li p {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+body #games-wrapper li .delete-icon-wrapper {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    display: none; /* remove this line when implement delete button */
+}
+
+body #games-wrapper li .delete-icon-wrapper .delete-icon {
+    filter: invert(98%) sepia(10%) saturate(79%) hue-rotate(233deg) brightness(114%) contrast(82%);
+    height: 20px;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+body #games-wrapper li .delete-icon-wrapper .delete-icon:hover {
+    opacity: 1;
+}

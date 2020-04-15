@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Gamber GameHub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="3rdpty/simplebar.css">
+    <script src="3rdpty/nunjucks.js"></script>
+    </head>
+    <body>
+
+        <div id="wrapper">
+
+            <div id="header">
+                <h1>🎮 Gamber GameHub</h1>
+            </div>
+
+            <div id="games-wrapper">
+                <ul id="games-ul" data-simplebar></ul>
+            </div>
+
+        </div>
+
+        <script>
+            var deleteButtonHovering = false;
+            var teste = false;
+        </script>
+
+        <script>
+            require('./nunjucks-render.js');
+            require('./3rdpty/simplebar.js');
+            require('./controllers.js');
+        </script>
+
+    </body>
+</html>
