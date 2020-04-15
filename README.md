@@ -1,4 +1,4 @@
-# Gamber GameHub
+# 🎮 Gamber GameHub
 Electron application for managing games' shortcuts. My desktop was a mess, so I made it for my own personal use.<br>
 Created with following technologies: HTML, CSS, JavaScript, Node, Electron, NunJucks, SimpleBar.
 
