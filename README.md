@@ -13,7 +13,7 @@ Create a file `game-list.json` inside the `src` folder. Must be something like t
 Games' icons must be `PNG` files, and placed inside `src/icons` folder.
 
 ### To-do List
-- Delete button feature
+- Delete game shortcut from UI
 - Add new game shortcut from UI
 - Change games' order from UI
 - Close Gamber when launching game
