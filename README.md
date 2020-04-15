@@ -1,5 +1,6 @@
 # Gamber GameHub
-Application for managing game's shortcuts. My desktop was a mess, so I made it for personal use. Made with following technologies: HTML, CSS, JavaScript, Node, Electron, NunJucks, SimpleBar.
+Application for managing game's shortcuts. My desktop was a mess, so I made it for personal use.<br>
+Created with following technologies: HTML, CSS, JavaScript, Node, Electron, NunJucks, SimpleBar.
 
 ### Getting Started
 Create a file `game-list.json` inside the `src` folder. Must be something like this:<br><br>
