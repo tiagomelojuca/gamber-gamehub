@@ -34,7 +34,7 @@ body #games-wrapper ul {
 body #games-wrapper li {
     display: flex;
     color: #e8e8e8;
-    background-color: #414141;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 90vw;
     height: 52px;
     margin: 0 auto 1em;
@@ -46,16 +46,16 @@ body #games-wrapper li {
 }
 
 body #games-wrapper li:hover {
-    background-color: #272727;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 body #games-wrapper li:active {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 1);
     transition: all 0.1s;
 }
 
 body #games-wrapper .noactive:active {
-    background-color: #272727 !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
     transition: all 0.1s;
 }
 

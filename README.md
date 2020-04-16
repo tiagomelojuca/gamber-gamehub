@@ -12,6 +12,8 @@ Create a file `game-list.json` inside the `src` folder. Must be something like t
 <br>
 Games' icons must be `PNG` files, and placed inside `src/icons` folder.
 
+Optionally, you may want customize default styles in `styles-override.css` inside `src` folder.
+
 ### To-do List
 - Delete game shortcut from UI
 - Add new game shortcut from UI

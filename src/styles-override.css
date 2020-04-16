@@ -1,0 +1,37 @@
+/* Override Default Styles */
+
+/* Body Background Color */
+/* If you'd like to use an image instead, just uncomment and adjust lines below */
+body {
+    background-color: #e8e8e8;
+    /* background: url('./assets/your-image-bg.jpg') center center; */
+    /* background-size: cover; */
+}
+
+/* Header */
+body #wrapper #header {
+    font-family: sans-serif;
+    color: #272727;
+}
+
+/* Game Buttons */
+body #games-wrapper li {
+    font-family: sans-serif;                            /* Text inside button font family */
+    color: #e8e8e8;                                   /* Text inside button color */
+}
+
+body #games-wrapper li {
+    background-color: rgba(0, 0, 0, 0.6);             /* Button normal state */
+}
+
+body #games-wrapper li:hover {
+    background-color: rgba(0, 0, 0, 0.8);             /* Button mouse:hover state */
+}
+
+body #games-wrapper .noactive:active {
+    background-color: rgba(0, 0, 0, 0.8) !important;  /* MUST repeat color above */
+}
+
+body #games-wrapper li:active {
+    background-color: rgba(0, 0, 0, 1);               /* Button mouse:pressed state */
+}
