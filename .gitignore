@@ -1,5 +1,7 @@
 # Personal Game List File
 src/game-list.json
+src/icons/*
+!src/icons/.gitkeep
 
 # Logs
 logs

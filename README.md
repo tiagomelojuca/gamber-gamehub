@@ -26,5 +26,6 @@ This project is licensed under MIT, please check LICENSE file.
 - [Electron](https://github.com/electron/electron) (c) 2013-2020 GitHub Inc
 - [Nunjucks](https://github.com/mozilla/nunjucks) (c) 2012-2015, James Long
 - [SimpleBar](https://github.com/Grsmto/simplebar) (c) 2015 Jonathan Nicol
+- [exe-icon-extractor](https://www.npmjs.com/package/@inithink/exe-icon-extractor) (c) 2019 inithink
 
 All third party licenses above can be found in `3rdpartylicenses` folder.
