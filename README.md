@@ -12,14 +12,12 @@ Create a file `game-list.json` inside the `src` folder. Must be something like t
 <br>
 Games' icons must be `PNG` files, and placed inside `src/icons` folder.
 
-Optionally, you may want customize default styles in `styles-override.css` inside `src` folder.
+Optionally, you may want customize default styles in `styles-override.css` inside `src` folder. Also, other user configs can be found in `config.json`, inside same folder.
 
 ### To-do List
 - Delete game shortcut from UI
 - Add new game shortcut from UI
 - Change games' order from UI
-- Close Gamber when launching game
-- Customize the default electron's menu
 
 ### Licensing
 This project is licensed under MIT, please check LICENSE file.

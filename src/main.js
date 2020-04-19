@@ -2,18 +2,23 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const child = require('child_process').execFile;
 const path = require('path');
 
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+// User config
+const jsonConfig = require('./config.json');
+var { userWidth, userHeight, quitWhenGameLaunchs } = jsonConfig;
+
+// Electron
+if (require('electron-squirrel-startup')) {
     app.quit();
 }
 
 const createWindow = () => {
+
     const mainWindow = new BrowserWindow({
         icon: __dirname + '/assets/gamepad.ico',
-        width: 400,
-        height: 600,
-        minWidth: 400,
-        minHeight: 600,
+        width: userWidth,
+        height: userHeight,
+        minWidth: userWidth,
+        minHeight: userHeight,
         resizable: false,
         webPreferences: {
             nodeIntegration: true,
@@ -26,7 +31,6 @@ const createWindow = () => {
 
 app.on('ready', createWindow);
 
-// Quit when all windows are closed.
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit();
@@ -39,7 +43,15 @@ app.on('activate', () => {
     }
 });
 
-// ipcMain
+// ipcMain Events
 ipcMain.on('execGame', (event, executablePath) => {
-    child(executablePath);
+    child(executablePath, (error) => {
+        if(error) {
+            event.reply('invalidPath');
+            return;
+        }
+        if(quitWhenGameLaunchs) {
+            app.quit();
+        }
+    });
 });

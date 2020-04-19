@@ -38,6 +38,10 @@ function execAssignedPath(index) {
     }
 }
 
+ipcRenderer.on('invalidPath', (event) => {
+    alert('ERROR: Invalid game path.');
+});
+
 for(i = 0; i < gameButtonsId.length; i++) {
     document.getElementById(gameButtonsId[i]).addEventListener('mouseup', execAssignedPath.bind(null, i))
 }

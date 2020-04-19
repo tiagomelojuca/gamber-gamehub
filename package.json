@@ -19,7 +19,10 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": { "asar": false, "icon": "src/assets/gamepad.ico" },
+      "packagerConfig": {
+        "asar": false,
+        "icon": "src/assets/gamepad.ico"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
@@ -45,7 +48,11 @@
     }
   },
   "dependencies": {
+    "@inithink/exe-icon-extractor": "^1.0.5",
     "electron-squirrel-startup": "^1.0.0"
+  },
+  "resolutions": {
+    "lodash": "4.17.15"
   },
   "devDependencies": {
     "@electron-forge/cli": "6.0.0-beta.50",
