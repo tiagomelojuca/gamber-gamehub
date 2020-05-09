@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
-const child = require('child_process').execFile;
+const { spawn } = require('child_process');
 const path = require('path');
 
 // User config
@@ -44,14 +44,41 @@ app.on('activate', () => {
 });
 
 // ipcMain Events
-ipcMain.on('execGame', (event, executablePath) => {
-    child(executablePath, (error) => {
-        if(error) {
-            event.reply('invalidPath');
-            return;
-        }
-        if(quitWhenGameLaunchs) {
-            app.quit();
-        }
+function getFileInfo(inputPath, searchedInfo) {
+    const pathIn = inputPath;
+    const fileIn = path.basename(pathIn);
+    const pathWithoutFileName = pathIn.slice(0, -fileIn.length);
+    
+    if(searchedInfo === 'folder') {
+        return pathWithoutFileName;
+    }
+
+    if(searchedInfo === 'filename') {
+        return fileIn;
+    }
+
+    return 1;
+}
+
+function launchGame(path) {
+
+    const gameFolder = getFileInfo(path, 'folder');
+    const gameFileName = getFileInfo(path, 'filename');
+    const command = `cd ${gameFolder} && start ${gameFileName}`;
+
+    const cmdInput = spawn('cmd.exe', ['/c', command]);
+
+    cmdInput.on('exit', (code) => {
+        return code;
     });
+
+    return 0;
+
+}
+
+ipcMain.on('execGame', (event, executablePath) => {
+    launchGame(executablePath);
+    if(quitWhenGameLaunchs) {
+        app.quit();
+    }
 });
